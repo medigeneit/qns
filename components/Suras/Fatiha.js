@@ -1,66 +1,93 @@
 import * as React from 'react';
-import { Text, View, StyleSheet, Image,TouchableOpacity,FlatList } from 'react-native';
+import { Text, View, StyleSheet, Image,TouchableOpacity,FlatList} from 'react-native';
 
- 
+
 
 export default class Fatiha extends React.Component {
-  static navigationOptions = {
-    header: null
-  };
-  render() {
-    return (
-     
-      <View style={styles.container}>
-       <FlatList
-          data={[
-            {id:1,arabic:'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',english:'(Bismillāhi r-raḥmāni r-raḥīm)'},
-            {id:2, arabic:'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',english:'(Al ḥamdu lillāhi rabbi l-’ālamīn)'},
-            {id:3,arabic:'الرَّحْمَنِ الرَّحِيمِ',english:'(Ar raḥmāni r-raḥīm)'},
-            {id:4,arabic:' مَالِكِ يَوْمِ الدِّينِ',english:'(Māliki yawmi d-dīn)'},
-          {id:5,arabic:'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ',english:'(Iyyāka na’budu wa iyyāka nasta’īn'},
-            {id:6,arabic:'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيم',english:'(Ihdinā ṣ-ṣirāṭ al-mustaqīm)'},
-            {id:7,arabic:'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا          الضَّالِّينَ',english:'(Ṣirāṭ al lazi na an’amta ‘alayhim, ġayril maġḍūbi ‘alayhim walāḍ ḍāllīn)'},
-             {id:1,arabic:'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',english:'(Bismillāhi r-raḥmāni r-raḥīm)'},
-            {id:2, arabic:'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',english:'(Al ḥamdu lillāhi rabbi l-’ālamīn)'},
-            {id:3,arabic:'الرَّحْمَنِ الرَّحِيمِ',english:'(Ar raḥmāni r-raḥīm)'},
-            {id:4,arabic:' مَالِكِ يَوْمِ الدِّينِ',english:'(Māliki yawmi d-dīn)'},
-          {id:5,arabic:'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ',english:'(Iyyāka na’budu wa iyyāka nasta’īn'},
-            {id:6,arabic:'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيم',english:'(Ihdinā ṣ-ṣirāṭ al-mustaqīm)'},
-            {id:7,arabic:'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا          الضَّالِّينَ',english:'(Ṣirāṭ al lazi na an’amta ‘alayhim, ġayril maġḍūbi ‘alayhim walāḍ ḍāllīn)'},
-             {id:1,arabic:'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',english:'(Bismillāhi r-raḥmāni r-raḥīm)'},
-            {id:2, arabic:'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',english:'(Al ḥamdu lillāhi rabbi l-’ālamīn)'},
-            {id:3,arabic:'الرَّحْمَنِ الرَّحِيمِ',english:'(Ar raḥmāni r-raḥīm)'},
-            {id:4,arabic:' مَالِكِ يَوْمِ الدِّينِ',english:'(Māliki yawmi d-dīn)'},
-          {id:5,arabic:'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ',english:'(Iyyāka na’budu wa iyyāka nasta’īn'},
-            {id:6,arabic:'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيم',english:'(Ihdinā ṣ-ṣirāṭ al-mustaqīm)'},
-            {id:7,arabic:'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا          الضَّالِّينَ',english:'(Ṣirāṭ al lazi na an’amta ‘alayhim, ġayril maġḍūbi ‘alayhim walāḍ ḍāllīn)'},
-            
-          ]}
-          renderItem={({item}) => <Text onPress={() => this.props.navigation.navigate('Fatiha')} style={styles.item}>{item.id}{item.arabic}{item.english}</Text>}
-        />
+static navigationOptions = {
+footer: null
+};
+render() {
+return (
+<View style={styles.container}>
+<Text style={styles.txt}>Al-Fatihah (The Opener)</Text>
+<FlatList
+data={[
+{id:1,
+arabic:'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ',
+english:'In the Name of Allah—the Most Compassionate, Most Merciful.'
+},
+{id:2,
+arabic:'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+english:'(All praise is for Allah—Lord of all worlds,)'
+},
+{id:3,arabic:'الرَّحْمَنِ الرَّحِيمِ',english:'(the Most Compassionate, Most Merciful,)'},
+{id:4,arabic:' مَالِكِ يَوْمِ الدِّينِ',english:'(Master of the Day of Judgment.)'},
+{id:5,arabic:'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ',english:'(You ˹alone˺ we worship and You ˹alone˺ we ask for help.'},
+{id:6,arabic:'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيم',english:'(Guide us along the Straight Path,)'},
+{id:7,arabic:'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ',english:'(the Path of those You have blessed—not those You are displeased with, or those who are astray.)'},
+]}
 
-      </View>    
-     );
-  }
+renderItem={({item}) =>
+<View style={styles.ayatlist}>
+<View style={styles.item}>
+<Text style={styles.ayatarabic}>{item.arabic} .{item.id}</Text>
+</View>
+<View  style={styles.item}>
+<Text>{item.english}</Text>
+</View>
+</View>
+}
+/>
+
+</View>
+);
+}
 }
 
 const styles = StyleSheet.create({
 
-    container:{
-        backgroundColor:'blue',
-        
-      
-    },
+container:{
+  paddingTop:10,
+backgroundColor:'#F3F3F3'
+},
 
-    item:{
-    margin: 29,
-    marginTop: 5,
-    paddingLeft:30,
-    paddingTop:50,
-    fontSize: 20,
-    fontWeight: 'bold',
-    textAlign: 'left',
-    color:'#fff'
 
+image:{
+width:50,
+height:50
+},
+
+item:{
+
+fontSize: 15,
+fontWeight: 'bold',
+textAlign: 'center',
+color:'black'
+
+},
+
+ayatarabic:{
+
+  paddingBottom: 10,
+ 
+  
   },
+
+
+
+ayatlist:{
+
+  padding:10,
+  paddingBottom:10,
+  
+  },
+
+txt:{
+fontSize: 20,
+fontWeight: 'bold',
+textAlign: 'center',
+color:'black'
+
+}
 })
